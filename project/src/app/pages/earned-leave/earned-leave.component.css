@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+  .parentDiv {
+      flex: 0 0 auto;
+      width: 100%;
+  }
+}

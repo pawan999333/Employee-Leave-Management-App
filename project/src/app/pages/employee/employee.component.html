@@ -1,6 +1,6 @@
 <div class="container-fluid my-4">
   <div class="row">
-      <div class="col-7">
+      <div class="col-7 parentDiv">
           <div class="card">
               <div class="card-header bg-secondary">
                   <div class="row">
@@ -34,9 +34,13 @@
                             <td>{{item.emailId}}</td>
                             <td>{{item.role}}</td>
                             <td>{{item.gender}}</td>
-                            <td class="d-flex justify-content-between">
+                            <!-- <td class="d-flex justify-content-between">
                               <button type="button" class="btn btn-warning btn-sm" (click)="onEdit(item)">Edit</button>
                               <button type="button" class="btn btn-danger btn-sm" (click)="onDelete(item.employeeId)">Delete</button>
+                            </td> -->
+                            <td class="d-flex justify-content-between">
+                              <i class="fas fa-edit text-warning" (click)="onEdit(item)" style="cursor: pointer;"></i>
+                              <i class="fas fa-trash text-danger" (click)="onDelete(item.employeeId)" style="cursor: pointer;"></i>
                             </td>
                           </tr>
                       </tbody>
@@ -44,7 +48,7 @@
               </div>
           </div>
       </div>
-      <div class="col-5">
+      <div class="col-5 parentDiv">
           <div class="card">
               <div class="card-header bg-secondary">
                   <div class="row">
@@ -107,8 +111,8 @@
 
                       </div>
 
-                      <button type="button" class="btn btn-warning mt-3" (click)="onSaveEmployee()" *ngIf="employeeObj.employeeId==0">Save Employee</button>
-                      <button type="button" class="btn btn-success mt-3" (click)="onUpdateEmployee()" *ngIf="employeeObj.employeeId!=0">Update Employee</button>
+                      <button type="button" class="btn btn-warning mt-3 col-12" (click)="onSaveEmployee()" *ngIf="employeeObj.employeeId==0">Save Employee</button>
+                      <button type="button" class="btn btn-success mt-3 col-12" (click)="onUpdateEmployee()" *ngIf="employeeObj.employeeId!=0">Update Employee</button>
 
                   </form>
               </div>
