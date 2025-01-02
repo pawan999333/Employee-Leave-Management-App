@@ -7,9 +7,11 @@ import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LayoutComponent } from './pages/layout/layout.component';
 import { EmployeeComponent } from './pages/employee/employee.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NewLeaveComponent } from './pages/new-leave/new-leave.component';
+import { EarnedLeaveComponent } from './pages/earned-leave/earned-leave.component';
+import { AsyncPipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -19,13 +21,16 @@ import { NewLeaveComponent } from './pages/new-leave/new-leave.component';
     LayoutComponent,
     EmployeeComponent,
     NewLeaveComponent,
+    EarnedLeaveComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+
 
   ],
   providers: [],

@@ -1,1 +1,59 @@
-<p>dashboard works!</p>
+<div class="container my-4">
+  <h3>Dashboard</h3>
+    <div class="row">
+      <!-- Total Employees Widget -->
+      <div class="col-md-6" *ngIf="this.masterSrv.loggedUserData.role=='Admin'">
+        <div class="card text-white bg-primary mb-3">
+          <div class="card-header">Total Employees</div>
+          <div class="card-body">
+            <p class="card-text" id="totalEmployees">{{dashboardData.totalEmployee}}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Total Projects Widget -->
+      <div class="col-md-6" *ngIf="this.masterSrv.loggedUserData.role=='Admin'">
+        <div class="card text-white bg-success mb-3">
+          <div class="card-header">Total Leave</div>
+          <div class="card-body">
+            <p class="card-text" id="totalProjects">{{dashboardData.totalLeaves}}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Employees in Projects -->
+      <div class="col-md-6">
+        <div class="card text-white bg-warning mb-3">
+          <div class="card-header">New Leaves</div>
+          <div class="card-body">
+            <p class="card-text" id="activeEmployees">{{dashboardData.totalNewLeaves}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card text-white bg-primary mb-3">
+          <div class="card-header">Approved Leaves</div>
+          <div class="card-body">
+            <p class="card-text" id="activeEmployees">{{dashboardData.totalApprovedLeaves}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card text-white bg-success mb-3">
+          <div class="card-header">Canceled Leaves</div>
+          <div class="card-body">
+            <p class="card-text" id="activeEmployees">{{dashboardData.totalCanceledLeave}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" *ngIf="this.masterSrv.loggedUserData.role=='Employee'">
+        <div class="card text-white bg-secondary mb-3">
+          <div class="card-header">Earned Leaves</div>
+          <div class="card-body">
+            <p class="card-text" id="activeEmployees">{{dashboardData.earnedLeave}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>

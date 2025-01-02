@@ -40,3 +40,41 @@ export interface APIResponse{
   message:string,
   data:any
 }
+
+export interface LeaveType{
+  leaveTypeId:number,
+  typeName:string
+}
+
+
+export interface EarnedLeave{
+  earnedLeaveId:number,
+  employeeId:number,
+  totalEarnedLeaves:number,
+  totalSickEarnedLeaves:number,
+  lastUpdatedDate:string,
+  employeeName:string,
+}
+
+export interface LeaveRequest{
+  leaveId:number,
+  employeeId:number,
+  leaveTypeId:number,
+  startDate:string,
+  endDate:string,
+  status:string,
+  reason:string,
+  requestDate:string,
+  employeeName:string,
+  contactNo:string,
+  typeName:string
+}
+
+export interface Dashboard{
+  totalEmployee: number,
+  totalLeaves: number,
+  totalNewLeaves: number,
+  totalApprovedLeaves: number
+  totalCanceledLeave: number,
+  earnedLeave:number
+}

@@ -7,9 +7,9 @@
                       <div class="col-6 text-white">
                           <strong>Employee Portal</strong>
                       </div>
-                      <div class="col-6 text-end">
+                      <!-- <div class="col-6 text-end">
                           <button class="btn btn-warning">Add New</button>
-                      </div>
+                      </div> -->
                   </div>
               </div>
               <div class="card-body">
@@ -34,7 +34,7 @@
                             <td>{{item.emailId}}</td>
                             <td>{{item.role}}</td>
                             <td>{{item.gender}}</td>
-                            <td>
+                            <td class="d-flex justify-content-between">
                               <button type="button" class="btn btn-warning btn-sm" (click)="onEdit(item)">Edit</button>
                               <button type="button" class="btn btn-danger btn-sm" (click)="onDelete(item.employeeId)">Delete</button>
                             </td>
@@ -51,9 +51,9 @@
                       <div class="col-6 text-white">
                           <strong>New Employee</strong>
                       </div>
-                      <div class="col-6 text-end">
+                      <!-- <div class="col-6 text-end">
                           <button class="btn btn-primary">Close</button>
-                      </div>
+                      </div> -->
                   </div>
               </div>
               <div class="card-body">
